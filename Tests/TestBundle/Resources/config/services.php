@@ -12,7 +12,6 @@ declare(strict_types=1);
  */
 
 use OAuth2Framework\WebFingerBundle\Tests\TestBundle\Entity\ResourceRepository;
-use OAuth2Framework\WebFingerBundle\Tests\TestBundle\Service\ResponseFactory;
 use OAuth2Framework\WebFingerBundle\Tests\TestBundle\Service\UriPathResolver;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
@@ -22,6 +21,5 @@ return function (ContainerConfigurator $container) {
         ->autoconfigure();
 
     $container->set(ResourceRepository::class);
-    $container->set(ResponseFactory::class);
     $container->set(UriPathResolver::class);
 };
